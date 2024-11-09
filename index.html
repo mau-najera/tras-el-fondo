@@ -1,71 +1,4 @@
 <!DOCTYPE html>
-<style>
-    .sidebar {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-
-    .sidebar img {
-        display: block;
-        margin: 0 auto 20px;
-        width: 80%;
-        border-radius: 50%;
-    }
-
-    .sidebar a {
-        padding: 10px 15px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sidebar a:hover {
-        color: #f1f1f1;
-    }
-
-    .sidebar .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    .blurred {
-        filter: blur(5px);
-    }
-</style>
-
-<div id="mySidebar" class="sidebar">
-    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-    <img src="path/to/your/image.jpg" alt="Profile Image">
-    <a href="change-theme.html">Cambiar tema</a>
-    <a href="donate.html">Donar</a>
-</div>
-
-<script>
-    function openNav() {
-        document.getElementById("mySidebar").style.width = "250px";
-        document.querySelector("body").classList.add("blurred");
-    }
-
-    function closeNav() {
-        document.getElementById("mySidebar").style.width = "0";
-        document.querySelector("body").classList.remove("blurred");
-    }
-
-    document.getElementById('menuButton').addEventListener('click', openNav);
-</script>
 <html lang="es">
 <head>
     <meta charset="UTF-8">
@@ -75,80 +8,89 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
 </head>
 <body>
-    <div class="header">
-        <div class="d-flex justify-content-between align-items-center mb-3">
-            <button id="menuButton" class="btn text-white"><i class="bi bi-list"></i></button>
-            <div>
-                <button class="btn text-white"><i class="bi bi-search"></i></button>
-            </div>
-        </div>
-        <div class="d-flex justify-content-between">
-            <button class="date-btn" data-date="11/OCT">
-                <div class="small">VIE</div>
-                <div class="small">11/OCT</div>
-            </button>
-            <button class="date-btn active" data-date="12/OCT">
-                <div class="small">SÁB</div>
-                <div class="small">12/OCT</div>
-            </button>
-        </div>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <img src="img/logo.jpg" alt="Tras El Fondo">
+        <a href="change-theme.html">Cambiar tema</a>
+        <a href="donate.html">Donar</a>
     </div>
 
-    <div class="schedule-container">
-        <div class="schedule fade-in" data-date="11/OCT" style="display: none;">
-            <div class="event p-3 border-bottom">
-                <div class="row">
-                    <div class="col-3 text-muted">09:00</div>
-                    <div class="col-9">
-                        <div class="fw-medium">Evento del 11 de Octubre</div>
-                        <div class="small text-muted">Ponente 1</div>
-                    </div>
+    <div id="mainContent">
+        <div class="header">
+            <div class="d-flex justify-content-between align-items-center mb-3">
+                <button id="menuButton" class="btn text-white"><i class="bi bi-list"></i></button>
+                <div>
+                    <button class="btn text-white"><i class="bi bi-search"></i></button>
                 </div>
+            </div>
+            <div class="d-flex justify-content-between">
+                <button class="date-btn" data-date="11/OCT">
+                    <div class="small">VIE</div>
+                    <div class="small">08/NOV</div>
+                </button>
+                <button class="date-btn active" data-date="12/OCT">
+                    <div class="small">SÁB</div>
+                    <div class="small">09/NOV</div>
+                </button>
             </div>
         </div>
-        <div class="schedule fade-in" data-date="12/OCT">
-            <div class="event p-3 border-bottom">
-                <div class="row">
-                    <div class="col-3 text-muted">09:00</div>
-                    <div class="col-9">
-                        <div class="fw-medium">Inauguración</div>
-                        <div class="small text-muted">Pilar Parás</div>
+    
+        <div class="schedule-container">
+            <div class="schedule fade-in" data-date="11/OCT" style="display: none;">
+                <div class="event p-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3 text-muted">09:00</div>
+                        <div class="col-9">
+                            <div class="fw-medium">Evento del 11 de Octubre</div>
+                            <div class="small text-muted">Ponente 1</div>
+                        </div>
                     </div>
                 </div>
             </div>
-
-            <div class="event p-3 border-bottom">
-                <div class="row">
-                    <div class="col-3 text-muted">10:00</div>
-                    <div class="col-9">
-                        <div class="fw-medium">La Transformación Digital</div>
-                        <div class="small text-muted">Miguel Ramírez y 2 más...</div>
+            <div class="schedule fade-in" data-date="12/OCT">
+                <div class="event p-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3 text-muted">09:00</div>
+                        <div class="col-9">
+                            <div class="fw-medium">Inauguración</div>
+                            <div class="small text-muted">Pilar Parás</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="event p-3 border-bottom">
-                <div class="row">
-                    <div class="col-3 text-muted">11:00</div>
-                    <div class="col-9">
-                        <div class="fw-medium">Presentación Institución</div>
-                        <div class="small text-muted">Guadalupe Pérez</div>
+    
+                <div class="event p-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3 text-muted">10:00</div>
+                        <div class="col-9">
+                            <div class="fw-medium">La Transformación Digital</div>
+                            <div class="small text-muted">Miguel Ramírez y 2 más...</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="event p-3 border-bottom">
-                <div class="row">
-                    <div class="col-3 text-muted">12:00</div>
-                    <div class="col-9">
-                        <div class="fw-medium">Presentación Institución</div>
-                        <div class="small text-muted">Dr. Mario Palacios</div>
+                <div class="event p-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3 text-muted">11:00</div>
+                        <div class="col-9">
+                            <div class="fw-medium">Presentación Institución</div>
+                            <div class="small text-muted">Guadalupe Pérez</div>
+                        </div>
                     </div>
                 </div>
-            </div>
-            <div class="event break p-3 border-bottom">
-                <div class="row">
-                    <div class="col-3 text-muted">13:00</div>
-                    <div class="col-9">
-                        <div class="fw-medium">RECESO</div>
+                <div class="event p-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3 text-muted">12:00</div>
+                        <div class="col-9">
+                            <div class="fw-medium">Presentación Institución</div>
+                            <div class="small text-muted">Dr. Mario Palacios</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="event break p-3 border-bottom">
+                    <div class="row">
+                        <div class="col-3 text-muted">13:00</div>
+                        <div class="col-9">
+                            <div class="fw-medium">RECESO</div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -158,6 +100,7 @@
     <div class="bottom-nav fixed-bottom footer-text">
         <button class="btn"><i class="bi bi-house"></i></button>
     </div>
+    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script>
         document.addEventListener('DOMContentLoaded', () => {
@@ -202,6 +145,22 @@
                     }, 300);
                 });
             });
+        });
+    </script>
+    
+    <script>
+        function openNav() {
+            document.getElementById("mySidebar").style.width = "250px";
+            document.getElementById("mainContent").classList.add("blurred");
+        }
+
+        function closeNav() {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("mainContent").classList.remove("blurred");
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            document.getElementById('menuButton').addEventListener('click', openNav);
         });
     </script>
 </body>
