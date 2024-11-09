@@ -1,0 +1,58 @@
+{
+    "schedule": {
+      "13/JUL": {
+        "events": [
+          {
+            "hora_inicio": "09:00",
+            "hora_fin": "10:00",
+            "titulo": "INAUGURACIÓN Y CONFERENCIA INAUGURAL",
+            "ponente": "Pilar Parás"
+          },
+          {
+            "hora_inicio": "10:00",
+            "titulo": "Panel La Transformación Digital",
+            "ponente": "Miguel Ramírez, Oscar Ortega, Gerónimo Tutusaus"
+          },
+          {
+            "hora_inicio": "11:00",
+            "titulo": "Presentación Institución",
+            "ponente": "Guadalupe Pérez"
+          },
+          {
+            "hora_inicio": "12:00",
+            "titulo": "Presentación Institución",
+            "ponente": "Dr. Mario Palacios"
+          },
+          {
+            "hora_inicio": "13:00",
+            "titulo": "RECESO",
+            "ponente": ""
+          }
+        ]
+      },
+      "10/NOV": {
+        "events": [
+          {
+            "hora_inicio": "10:00",
+            "titulo": "La Transformación Digital",
+            "ponente": "Miguel Ramírez y 2 más..."
+          },
+          {
+            "hora_inicio": "11:00",
+            "titulo": "Presentación Institución",
+            "ponente": "Guadalupe Pérez"
+          },
+          {
+            "hora_inicio": "12:00",
+            "titulo": "Presentación Institución",
+            "ponente": "Dr. Mario Palacios"
+          },
+          {
+            "hora_inicio": "13:00",
+            "titulo": "RECESO",
+            "ponente": ""
+          }
+        ]
+      }
+    }
+  }
