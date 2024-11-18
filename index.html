@@ -1,19 +1,20 @@
 <!DOCTYPE html>
 <html lang="es">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
     <div id="mySidebar" class="sidebar">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <img src="img/logo.png" alt="Tras El Fondo">
+        <div class="logo-sidebar">
+            <img src="img/logo.png" alt="Tras El Fondo">
+            <a href="javascript:void(0)" class="closebtn" id="closeNavBtn">&times;</a>
+        </div>
         <a href="change-theme.html">Cambiar tema</a>
         <a href="donate.html">Donar</a>
     </div>
@@ -21,88 +22,45 @@
     <div id="mainContent">
         <div class="header">
             <div class="d-flex justify-content-between align-items-center mb-3">
-                <button id="menuButton" class="btn text-white"><i class="bi bi-list"></i></button>
-                <div>
-                    <button class="btn text-white"><i class="bi bi-search"></i></button>
+                <button id="openNavBtn" class="btn text-white">
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- Botón de búsqueda -->
+                <button class="btn text-white" id="searchBtn">
+                    <i class="bi bi-search"></i>
+                </button>
+
+                <!-- Caja de texto que aparecerá al hacer clic en el botón de búsqueda -->
+                <div id="searchBoxContainer" class="search-box-container">
+                    <input type="text" id="searchBox" class="search-box" placeholder="Buscar eventos...">
                 </div>
+
             </div>
-            <div class="d-flex justify-content-between">
-                <button class="date-btn" data-date="11/OCT">
-                    <div class="small">VIE</div>
-                    <div class="small">08/NOV</div>
-                </button>
-                <button class="date-btn active" data-date="12/OCT">
-                    <div class="small">SÁB</div>
-                    <div class="small">09/NOV</div>
-                </button>
+            <div id="dateButtons" class="d-flex justify-content-between">
+                <!-- Los botones se insertarán mediante JavaScript -->
             </div>
         </div>
 
         <div class="schedule-container">
-            <div class="schedule fade-in" data-date="11/OCT" style="display: none;">
-                <div class="event p-3 border-bottom">
-                    <div class="row">
-                        <div class="col-3 text-muted">09:00</div>
-                        <div class="col-9">
-                            <div class="fw-medium">Evento del 11 de Octubre</div>
-                            <div class="small text-muted">Ponente 1</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="schedule fade-in" data-date="12/OCT">
-                <div class="event p-3 border-bottom">
-                    <div class="row">
-                        <div class="col-3 text-muted">09:00</div>
-                        <div class="col-9">
-                            <div class="fw-medium">Inauguración</div>
-                            <div class="small text-muted">Pilar Parás</div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="event p-3 border-bottom">
-                    <div class="row">
-                        <div class="col-3 text-muted">10:00</div>
-                        <div class="col-9">
-                            <div class="fw-medium">La Transformación Digital</div>
-                            <div class="small text-muted">Miguel Ramírez y 2 más...</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="event p-3 border-bottom">
-                    <div class="row">
-                        <div class="col-3 text-muted">11:00</div>
-                        <div class="col-9">
-                            <div class="fw-medium">Presentación Institución</div>
-                            <div class="small text-muted">Guadalupe Pérez</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="event p-3 border-bottom">
-                    <div class="row">
-                        <div class="col-3 text-muted">12:00</div>
-                        <div class="col-9">
-                            <div class="fw-medium">Presentación Institución</div>
-                            <div class="small text-muted">Dr. Mario Palacios</div>
-                        </div>
-                    </div>
-                </div>
-                <div class="event break p-3 border-bottom">
-                    <div class="row">
-                        <div class="col-3 text-muted">13:00</div>
-                        <div class="col-9">
-                            <div class="fw-medium">RECESO</div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            <!-- El contenido se insertará dinámicamente desde Firebase -->
         </div>
+
         <div class="bottom-nav fixed-bottom footer-text">
-            <a href="index.html" class="btn"><i class="bi bi-house"></i></a>
+            <a href="index.html" class="btn text-white">
+                <i class="bi bi-house"></i>
+            </a>
         </div>
     </div>
-</body>
-    <script src="js/main-scripts.js"></script>
+
+    <script type="module">
+        import { openNav, closeNav } from './js/nav.js';
+        
+        // Agregar event listeners para los botones del navbar
+        document.getElementById('openNavBtn').addEventListener('click', openNav);
+        document.getElementById('closeNavBtn').addEventListener('click', closeNav);
+    </script>
+    <script src="js/main-scripts.js" type="module"></script>
     <script type="module" src="js/firebase.js"></script>
+</body>
 </html>

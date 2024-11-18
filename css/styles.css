@@ -7,6 +7,7 @@
 
 html, body{
     height: 100%;
+    overflow: hidden;
 }
 
 /* Estilos base */
@@ -17,11 +18,16 @@ html, body{
 }
 
 body {
+    margin: 0;
+    padding: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
 }
 
-#mainContent{
+#mainContent {
+    display: flex;
+    flex-direction: column;
     height: 100%;
+    overflow: hidden;
 }
 
 /* Footer */
@@ -33,8 +39,12 @@ body {
 /* Header */
 .header {
     background-color: var(--primary-color);
+    position: relative;
+    top: 0;
     color: white;
     padding: 1rem;
+    z-index: 2;
+    flex-shrink: 0;
 }
 
 /* Botones de fechas */
@@ -72,6 +82,8 @@ body {
     opacity: 0;
     transform: translateX(-20px);
     animation: slideIn 0.5s forwards;
+    width: 100%;
+    position: relative;
 }
 
 @keyframes slideIn {
@@ -84,13 +96,17 @@ body {
 /* Contenedor y animación de programación */
 .schedule-container {
     position: relative;
-    min-height: 400px;
+    -webkit-overflow-scrolling: touch; /* Para mejor scroll en iOS */
+    flex: 1;
+    overflow-y: auto;
+    padding-bottom: 10vh; /* Espacio para que no tape el footer */
 }
 
 .schedule {
     position: absolute;
     width: 100%;
     transition: opacity 0.3s ease, transform 0.3s ease;
+    min-height: min-content; /* Asegura que tome al menos el espacio de su contenido */
 }
 
 .schedule.fade-out {
@@ -103,6 +119,9 @@ body {
     transform: translateX(0);
 }
 
+.fixed-bottom {
+    z-index: 1;
+}
 /* Navegación inferior */
 .bottom-nav {
     background-color: var(--primary-color);
@@ -126,7 +145,7 @@ body {
 
 /* Evento de tipo receso */
 .event.break {
-    background-color: #d1fae5;
+    background-color: #00ffea52;
 }
 
 /* Barra lateral */
@@ -134,19 +153,25 @@ body {
     height: 100%;
     width: 0;
     position: fixed;
-    z-index: 1;
+    z-index: 3;
     top: 0;
     left: 0;
     background-color: #111;
     overflow-x: hidden;
     transition: width 0.5s;
     padding-top: 60px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-content: stretch;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 
 .sidebar img {
     display: block;
     margin: 0 auto 20px;
-    width: 80%;
+    width: 50%;
     border-radius: 5%;
 }
 
@@ -166,13 +191,53 @@ body {
 .sidebar .closebtn {
     position: absolute;
     top: 0;
-    right: 25px;
+    right: 0px;
     font-size: 36px;
     margin-left: 50px;
 }
 
 /* Clase para el efecto de desenfoque */
 .blurred {
-    filter: blur(5px);
+    filter: blur(2px) brightness(0.7);
+    backdrop-filter: blur(10px);
     transition: filter 0.3s ease;
 }
+
+#searchBoxContainer {
+    display: none; /* Inicialmente oculto */
+    position: absolute;
+    top: 50px; /* Ajusta según donde quieras la caja */
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background: #fff;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: slideIn 0.3s forwards;
+  }
+  
+  .search-box {
+    width: 100%;
+    padding: 8px;
+    border-radius: 15px;
+    border: 1px solid #ccc;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-20px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  /* Estilo de resaltar eventos */
+  .highlight {
+    background-color: rgba(100, 149, 237, 0.3); /* Azul suave con opacidad */
+    border-radius: 5px;
+  }
+  
+  

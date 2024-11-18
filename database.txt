@@ -1,0 +1,82 @@
+{
+  "schedule": [
+    {
+      "date": "09/NOV/2025",
+      "events": [
+        {
+          "hora_inicio": "09:00",
+          "hora_fin": "10:00",
+          "titulo": "INAUGURACIÓN Y CONFERENCIA INAUGURAL",
+          "ponente": "Pilar Parás",
+          "descripcion": "Conferencia inaugural del evento"
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "10:00",
+          "titulo": "Panel La Transformación Digital",
+          "ponente": "Miguel Ramírez, Oscar Ortega, Gerónimo Tutusaus",
+          "descripcion": "Panel de discusión sobre la transformación digital"
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "10:00",
+          "titulo": "Panel La Transformación Digital",
+          "ponente": "Miguel Ramírez, Oscar Ortega, Gerónimo Tutusaus",
+          "descripcion": "Panel de discusión sobre la transformación digital"
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "10:00",
+          "titulo": "Panel La Transformación Digital",
+          "ponente": "Miguel Ramírez, Oscar Ortega, Gerónimo Tutusaus",
+          "descripcion": "Panel de discusión sobre la transformación digital"
+        },
+        {
+          "hora_inicio": "13:00",
+          "hora_fin": "10:00",
+          "titulo": "RECESO",
+          "ponente": ""
+        }
+      ]
+    },
+    {
+      "date": "10/NOV/2025",
+      "events": [
+        {
+          "hora_inicio": "09:00",
+          "hora_fin": "10:00",
+          "titulo": "Charla de Ciberseguridad",
+          "ponente": "Ana Gómez",
+          "descripcion": "Introducción a la ciberseguridad moderna"
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "10:00",
+          "titulo": "Taller de Desarrollo Web",
+          "ponente": "Luis Morales",
+          "descripcion": "Prácticas en desarrollo web responsivo"
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "10:00",
+          "titulo": "Taller de Desarrollo Web",
+          "ponente": "Luis Morales",
+          "descripcion": "Prácticas en desarrollo web responsivo"
+        },
+        {
+          "hora_inicio": "11:30",
+          "hora_fin": "10:00",
+          "titulo": "Mesa Redonda: IA y Ética",
+          "ponente": "Carlos Sánchez, María López",
+          "descripcion": "Discusión sobre los desafíos éticos de la inteligencia artificial"
+        },
+        {
+          "hora_inicio": "13:00",
+          "hora_fin": "10:00",
+          "titulo": "RECESO",
+          "ponente": ""
+        }
+      ]
+    }
+  ]
+}

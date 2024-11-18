@@ -1,58 +1,124 @@
 {
-    "schedule": {
-      "13/JUL": {
-        "events": [
-          {
-            "hora_inicio": "09:00",
-            "hora_fin": "10:00",
-            "titulo": "INAUGURACIÓN Y CONFERENCIA INAUGURAL",
-            "ponente": "Pilar Parás"
-          },
-          {
-            "hora_inicio": "10:00",
-            "titulo": "Panel La Transformación Digital",
-            "ponente": "Miguel Ramírez, Oscar Ortega, Gerónimo Tutusaus"
-          },
-          {
-            "hora_inicio": "11:00",
-            "titulo": "Presentación Institución",
-            "ponente": "Guadalupe Pérez"
-          },
-          {
-            "hora_inicio": "12:00",
-            "titulo": "Presentación Institución",
-            "ponente": "Dr. Mario Palacios"
-          },
-          {
-            "hora_inicio": "13:00",
-            "titulo": "RECESO",
-            "ponente": ""
-          }
-        ]
-      },
-      "10/NOV": {
-        "events": [
-          {
-            "hora_inicio": "10:00",
-            "titulo": "La Transformación Digital",
-            "ponente": "Miguel Ramírez y 2 más..."
-          },
-          {
-            "hora_inicio": "11:00",
-            "titulo": "Presentación Institución",
-            "ponente": "Guadalupe Pérez"
-          },
-          {
-            "hora_inicio": "12:00",
-            "titulo": "Presentación Institución",
-            "ponente": "Dr. Mario Palacios"
-          },
-          {
-            "hora_inicio": "13:00",
-            "titulo": "RECESO",
-            "ponente": ""
-          }
-        ]
-      }
+  "schedule": [
+    {
+      "date": "09/NOV/2025",
+      "events": [
+        {
+          "hora_inicio": "09:00",
+          "hora_fin": "10:00",
+          "titulo": "INAUGURACIÓN Y CONFERENCIA INAUGURAL",
+          "ponente": "Pilar Parás",
+          "descripcion": "Conferencia inaugural del evento"
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "11:00",
+          "titulo": "Panel La Transformación Digital",
+          "ponente": "Miguel Ramírez, Oscar Ortega, Gerónimo Tutusaus",
+          "descripcion": "Panel de discusión sobre la transformación digital"
+        },
+        {
+          "hora_inicio": "11:00",
+          "hora_fin": "12:00",
+          "titulo": "Tecnologías Emergentes",
+          "ponente": "Juan Pérez",
+          "descripcion": "Conferencia sobre tendencias tecnológicas de los próximos años."
+        },
+        {
+          "hora_inicio": "12:00",
+          "hora_fin": "13:00",
+          "titulo": "Ciberseguridad y Privacidad",
+          "ponente": "Lucía Torres",
+          "descripcion": "Cómo proteger la información personal en la era digital."
+        },
+        {
+          "hora_inicio": "13:00",
+          "hora_fin": "14:00",
+          "titulo": "RECESO",
+          "ponente": ""
+        },
+        {
+          "hora_inicio": "14:00",
+          "hora_fin": "15:00",
+          "titulo": "Impacto de la Inteligencia Artificial",
+          "ponente": "Roberto García",
+          "descripcion": "Una mirada a los beneficios y riesgos de la IA."
+        },
+        {
+          "hora_inicio": "15:00",
+          "hora_fin": "16:00",
+          "titulo": "El Futuro del Trabajo",
+          "ponente": "Andrea Medina",
+          "descripcion": "Cómo las tecnologías están redefiniendo el entorno laboral."
+        },
+        {
+          "hora_inicio": "16:00",
+          "hora_fin": "17:00",
+          "titulo": "Clausura del Día",
+          "ponente": "Carlos Martínez",
+          "descripcion": "Resumen y reflexiones del día."
+        }
+      ]
+    },
+    {
+      "date": "10/NOV/2025",
+      "events": [
+        {
+          "hora_inicio": "09:00",
+          "hora_fin": "10:00",
+          "titulo": "Tecnología y Sustentabilidad",
+          "ponente": "Ana López",
+          "descripcion": "Exploración sobre cómo la tecnología está transformando los modelos sustentables."
+        },
+        {
+          "hora_inicio": "10:00",
+          "hora_fin": "11:00",
+          "titulo": "Innovación en la Educación",
+          "ponente": "Carlos Méndez",
+          "descripcion": "Una charla sobre nuevas herramientas digitales aplicadas a la enseñanza."
+        },
+        {
+          "hora_inicio": "11:00",
+          "hora_fin": "12:00",
+          "titulo": "Blockchain en los Negocios",
+          "ponente": "Jorge Ramos",
+          "descripcion": "Cómo el blockchain está revolucionando las industrias."
+        },
+        {
+          "hora_inicio": "12:00",
+          "hora_fin": "13:00",
+          "titulo": "Redes Sociales y Marketing",
+          "ponente": "Elena Ruiz",
+          "descripcion": "Estrategias modernas para maximizar el alcance en plataformas digitales."
+        },
+        {
+          "hora_inicio": "13:00",
+          "hora_fin": "14:00",
+          "titulo": "RECESO",
+          "ponente": ""
+        },
+        {
+          "hora_inicio": "14:00",
+          "hora_fin": "15:00",
+          "titulo": "Diseño de Experiencias de Usuario",
+          "ponente": "Laura Gutiérrez",
+          "descripcion": "Aspectos clave para mejorar la interacción en plataformas digitales."
+        },
+        {
+          "hora_inicio": "15:00",
+          "hora_fin": "16:00",
+          "titulo": "IoT y Ciudades Inteligentes",
+          "ponente": "Santiago Ávila",
+          "descripcion": "El papel del Internet de las Cosas en la modernización urbana."
+        },
+        {
+          "hora_inicio": "16:00",
+          "hora_fin": "17:00",
+          "titulo": "Clausura del Evento",
+          "ponente": "Gabriela Fernández",
+          "descripcion": "Reflexiones finales y agradecimientos a los asistentes."
+        }
+      ]
     }
-  }
+  ]
+}
